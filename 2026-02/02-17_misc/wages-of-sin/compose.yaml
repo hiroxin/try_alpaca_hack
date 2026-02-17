@@ -1,0 +1,9 @@
+services:
+  app:
+    build:
+      context: .
+      platforms:
+        - linux/amd64
+    ports:
+      - "${PORT:-1337}:1337"
+    restart: unless-stopped
